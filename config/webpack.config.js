@@ -27,6 +27,8 @@ const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpack
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
+const px2rem = require('postcss-px2rem')
+
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
@@ -129,6 +131,7 @@ module.exports = function (webpackEnv) {
               },
               stage: 3,
             }),
+            px2rem({remUtil: 37.5}),
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
