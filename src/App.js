@@ -1,6 +1,10 @@
+import './App.less'
+
 function App() {
   return (
-    <h1>hello world</h1>
+    <div>
+      <h1 className="apph1"> hello world </h1>
+    </div>
   )
 }
 
