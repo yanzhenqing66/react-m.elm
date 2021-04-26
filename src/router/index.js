@@ -1,4 +1,5 @@
-import { lazy, Route, Switch, Suspense, Redirect } from 'react-router-dom'
+import { Suspense, lazy } from 'react'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 import Loading from '../components/loading'
 const Home = lazy(() => import('../pages/home'))
